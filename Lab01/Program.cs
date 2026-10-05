@@ -53,36 +53,53 @@
 // Console.WriteLine($"25 / 4 как double: {studentsPerGroupCorrect}");
 
 
+// Console.WriteLine();
+// Console.WriteLine("Способы собрать строку");
+
+// string firstName = "Анна";
+// string lastName = "Смирнова";
+
+// // Способ 1: конкатенация через оператор +
+// string fullNameConcat = firstName + " " + lastName;
+
+// // Способ 2: интерполяция через $""
+// string fullNameInterp = $"{firstName} {lastName}";
+
+// // Способ 3: метод string.Concat
+// string fullNameConcatMethod = string.Concat(firstName, " ", lastName);
+
+// Console.WriteLine(fullNameConcat);
+// Console.WriteLine(fullNameInterp);
+// Console.WriteLine(fullNameConcatMethod);
+// // Сравнение через == у строк идёт по содержимому, все три способа должны дать True
+// Console.WriteLine($"Все три строки равны: {fullNameConcat == fullNameInterp && fullNameInterp == fullNameConcatMethod}");
+
+// Console.WriteLine();
+// Console.WriteLine("Константы");
+
+// // НДС и название вуза не меняются во время работы программы
+// const double VatRate = 0.20;
+// const string CollegeName = "ВФ ВолГУ";
+
+// double productPrice = 1000;
+// double priceWithVat = productPrice * (1 + VatRate);
+
+// Console.WriteLine($"Учебное заведение: {CollegeName}");
+// Console.WriteLine($"Цена без НДС: {productPrice}, с НДС ({VatRate:P0}): {priceWithVat}");
+
+
 Console.WriteLine();
-Console.WriteLine("Способы собрать строку");
+Console.WriteLine("Финансовый мини-расчёт");
 
-string firstName = "Анна";
-string lastName = "Смирнова";
+const int MonthsInSemester = 4;
 
-// Способ 1: конкатенация через оператор +
-string fullNameConcat = firstName + " " + lastName;
+int scholarship = 3000;
+int monthlyExpenses = 2500;
 
-// Способ 2: интерполяция через $""
-string fullNameInterp = $"{firstName} {lastName}";
+int monthlyBalance = scholarship - monthlyExpenses;
+int semesterBalance = monthlyBalance * MonthsInSemester;
 
-// Способ 3: метод string.Concat
-string fullNameConcatMethod = string.Concat(firstName, " ", lastName);
-
-Console.WriteLine(fullNameConcat);
-Console.WriteLine(fullNameInterp);
-Console.WriteLine(fullNameConcatMethod);
-// Сравнение через == у строк идёт по содержимому, все три способа должны дать True
-Console.WriteLine($"Все три строки равны: {fullNameConcat == fullNameInterp && fullNameInterp == fullNameConcatMethod}");
-
-Console.WriteLine();
-Console.WriteLine("Константы");
-
-// НДС и название вуза не меняются во время работы программы
-const double VatRate = 0.20;
-const string CollegeName = "ВФ ВолГУ";
-
-double productPrice = 1000;
-double priceWithVat = productPrice * (1 + VatRate);
-
-Console.WriteLine($"Учебное заведение: {CollegeName}");
-Console.WriteLine($"Цена без НДС: {productPrice}, с НДС ({VatRate:P0}): {priceWithVat}");
+Console.WriteLine($"Стипендия: {scholarship} руб.");
+Console.WriteLine($"Расходы на еду и проезд в месяц: {monthlyExpenses} руб.");
+Console.WriteLine($"Останется к концу месяца: {monthlyBalance} руб.");
+Console.WriteLine($"За семестр ({MonthsInSemester} мес.) останется: {semesterBalance} руб.");
